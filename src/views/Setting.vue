@@ -5,7 +5,7 @@
             Focus <br />
             <input
                 type="number"
-                min="0"
+                min="1"
                 v-model="focusTime"
                 @keyup.enter="save"
             />
@@ -14,7 +14,7 @@
             Short break <br />
             <input
                 type="number"
-                min="0"
+                min="1"
                 v-model="shortBreakTime"
                 @keyup.enter="save"
             />
@@ -23,7 +23,7 @@
             Long break <br />
             <input
                 type="number"
-                min="0"
+                min="1"
                 v-model="longBreakTime"
                 @keyup.enter="save"
             />
