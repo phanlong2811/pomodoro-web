@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="home">
+        <app-clock />
+        <app-status />
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import AppClock from "../components/AppClock.vue";
+import AppStatus from "../components/AppStatus.vue";
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+    components: {
+        AppClock,
+        AppStatus,
+    },
+};
 </script>
+
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+.home {
+    font-family: "Rubik", sans-serif;
+}
+</style>
