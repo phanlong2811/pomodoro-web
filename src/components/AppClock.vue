@@ -13,8 +13,10 @@ export default {
     watch: {
         seconds(val) {
             if (val == 0 && this.minutes == 0) {
+                this.count++;
                 this.pause();
-                this.id = (this.id + 1) % 3;
+                if (this.count % 9 == 0) this.id = 2;
+                else this.id = (this.id + 1) % 2;
             }
         },
         id(val) {
@@ -46,6 +48,7 @@ export default {
             minutes: this.$store.state.settingData[0].time,
             seconds: 0,
             isPause: true,
+            count: 0,
         };
     },
     methods: {
